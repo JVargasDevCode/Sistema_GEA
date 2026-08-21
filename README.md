@@ -1,4 +1,4 @@
-# GEA — Gestão de Eventos Acadêmicos
+# GEA — Gestão de Eventos Acadêmicos.
 
 Plataforma web centralizada para planejamento, inscrições, controle de presença e certificação automatizada de eventos acadêmicos.
 
