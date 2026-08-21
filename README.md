@@ -1,72 +1,74 @@
-### Descrição resumida
-O GEA é um sistema web voltado à organização de eventos acadêmicos — como semanas acadêmicas, palestras, workshops e minicursos — que centraliza o cadastro de eventos, atividades e palestrantes, permite a inscrição dos participantes com controle automático de vagas, registra presença, possibilita avaliação das atividades e emite certificados automaticamente para quem atinge a frequência mínima exigida.
+# GEA — Gestão de Eventos Acadêmicos
 
-## 2. Contexto e Problema
-Instituições de ensino e cursos organizam com frequência eventos acadêmicos voltados à comunidade estudantil, como semanas de curso, palestras, workshops e minicursos. Atualmente, esse processo costuma ser conduzido de forma manual ou fragmentada: inscrições feitas em planilhas ou formulários avulsos, listas de presença em papel, controle de vagas feito "de cabeça" pelos organizadores e certificados montados manualmente após o evento.
-Esse cenário afeta diretamente os organizadores — coordenadores de curso, professores e equipes de eventos — que perdem tempo consolidando dados dispersos, e também os participantes (estudantes e comunidade em geral), que enfrentam falta de clareza sobre vagas disponíveis, ausência de confirmação de inscrição e demora na emissão de certificados.
-Justifica-se o desenvolvimento do sistema pela necessidade de reduzir erros de controle de vagas, eliminar retrabalho manual, padronizar o registro de presença e permitir a emissão automática e confiável de certificados, além de gerar dados consolidados que auxiliem a instituição a avaliar o alcance e a qualidade de seus eventos.
+Plataforma web centralizada para planejamento, inscrições, controle de presença e certificação automatizada de eventos acadêmicos.
 
+---
 
-## 3. Objetivos
-Objetivo geral
-Desenvolver um sistema web para gerenciar o cadastro, a inscrição e o acompanhamento de eventos acadêmicos, controlando vagas, presença e emissão de certificados.
-Objetivos específicos
+## 📌 Visão Geral
 
-●	Permitir o cadastro de eventos, atividades e palestrantes de forma centralizada.
+O **GEA** simplifica a gestão de semanas acadêmicas, palestras, workshops e minicursos. A ferramenta centraliza cadastros, gerencia vagas em tempo real, valida frequência e automatiza a geração de certificados para os participantes elegíveis.
 
-●	Possibilitar a inscrição on-line dos participantes, com controle automático de vagas por atividade.
+---
 
-●	Registrar a presença dos participantes em cada atividade realizada.
+## 🎯 Contexto & Problema
 
-●	Emitir certificados automaticamente para os participantes que atingirem a frequência mínima exigida.
+Instituições de ensino frequentemente enfrentam gargalos no gerenciamento de eventos acadêmicos devido ao uso de ferramentas descentralizadas e processos manuais:
 
-●	Disponibilizar relatórios de inscrições, presença e avaliação para apoiar a organização dos eventos.
+* **Inconsistência de Dados:** Uso de planilhas dispersas e formulários avulsos para inscrição.
+* **Ineficiência Operacional:** Controle manual de vagas, listas de presença impressas em papel e emissão individual de certificados.
+* **Falta de Transparência:** Ausência de confirmações instantâneas de vaga para os estudantes e atrasos na entrega dos comprovantes de participação.
 
+### Solução Proposta
+O GEA reduz erros de alocação de vagas, elimina retrabalho administrativo, padroniza a coleta de presença e fornece relatórios consolidados para análise de impacto e qualidade dos eventos institucionais.
 
-### 4. Público-alvo e Perfis de Usuário
-Administrador / Organizador
-Responsável pela criação e manutenção dos eventos. Cadastra eventos, atividades e palestrantes, acompanha o número de inscritos e vagas disponíveis, registra ou confere a presença dos participantes, acessa relatórios de inscrição, presença e avaliação, e emite ou revisa a emissão de certificados.
-Participante
-Estudante ou membro da comunidade acadêmica interessado nos eventos. Consulta os eventos e a programação de atividades, realiza inscrição nas atividades de interesse, acompanha suas inscrições e vagas, avalia as atividades em que participou e acessa seu certificado ao final do evento.
-Observação: os palestrantes são cadastrados no sistema como informação vinculada às atividades (nome, mini currículo e contato), não sendo previsto, nesta primeira versão, um perfil de acesso próprio para eles.
+---
 
+## 🎯 Objetivos
 
-### 5. Escopo
-Incluído na primeira versão (v1)
+### Objetivo Geral
+Desenvolver uma aplicação web integrada para gestão, acompanhamento e certificação automática de eventos acadêmicos.
 
-●	Cadastro de eventos, atividades e palestrantes.
+### Objetivos Específicos
+* **Centralização:** Permitir o cadastro simplificado de eventos, cronogramas de atividades e palestrantes.
+* **Automação de Vagas:** Gerenciar inscrições com controle dinâmico e limite por atividade.
+* **Presença & Certificação:** Registrar a frequência dos participantes e emitir certificados automaticamente para quem cumprir os requisitos mínimos.
+* **Tomada de Decisão:** Gerar relatórios consolidados sobre adesão, participação e avaliação das atividades.
 
-●	Inscrição on-line de participantes em eventos e atividades.
+---
 
-●	Controle automático de vagas por atividade.
+## 👥 Perfis de Usuário
 
-●	Registro de presença dos participantes.
+| Perfil | Responsabilidades & Ações |
+| :--- | :--- |
+| **Organizador / Administrador** | Gerencia eventos, atividades e palestrantes; monitora inscrições; registra presenças; acessa relatórios analíticos e valida a emissão de certificados. |
+| **Participante** | Explora a programação; realiza inscrições em atividades; acompanha status de vaga; avalia sessões frequentadas e realiza o download de certificados. |
 
-●	Cálculo de frequência e emissão automática de certificados.
+> **Nota:** Palestrantes são cadastrados como entidade vinculada às atividades (mini bio e contatos), sem perfil de acesso exclusivo nesta versão.
 
-●	Avaliação das atividades pelos participantes.
+---
 
-●	Relatórios de inscrições, presença e avaliação.
+## 🗺️ Escopo do Projeto
 
-Não incluído nesta etapa
+### ✅ Funcionalidades Incluídas (v1.0)
+- Cadastro de eventos, cronogramas, sessões e palestrantes.
+- Sistema de inscrição on-line com controle automático de capacidade.
+- Registro e validação de presença dos participantes.
+- Regra de cálculo de frequência e emissão automática de certificados em PDF.
+- Módulo de avaliação do evento pelos participantes.
+- Painel de relatórios (inscrições, presença e feedbacks).
 
-●	Cobrança e pagamento de inscrições.
+### ⛔ Fora do Escopo Atual
+- Gestão de pagamentos ou cobrança de taxa de inscrição.
+- Integração via API com sistemas acadêmicos legados.
+- Aplicativo móvel nativo (a interface será estritamente web/responsiva).
+- Validação de certificados via QR Code ou autenticação em Blockchain.
+- Notificações ativas via SMS ou WhatsApp.
 
-●	Integração com sistemas acadêmicos institucionais (ex.: sistema de matrícula da instituição).
+---
 
-●	Aplicativo móvel nativo (apenas acesso via navegador, com layout responsivo).
+## ⚠️ Restrições
 
-●	Emissão de certificado com verificação por QR code ou blockchain.
-
-●	Envio de notificações por SMS ou WhatsApp.
-
-Restrições
-
-●	O desenvolvimento deve respeitar o cronograma do 1º bimestre da disciplina.
-
-●	A equipe utilizará tecnologias web já conhecidas pelos integrantes.
-
-●	O acesso ao sistema ocorrerá exclusivamente via navegador (design responsivo), sem versão desktop instalável.
-
-●	Não há, nesta fase, orçamento previsto para serviços pagos de envio de mensagens ou gateways de pagamento.
-
+1. **Prazo:** O desenvolvimento está restrito ao cronograma do 1º bimestre acadêmico.
+2. **Arquitetura:** Aplicação 100% web com suporte a layout responsivo para navegadores.
+3. **Tecnologia:** Uso exclusivo de tecnologias dominadas pela equipe de desenvolvimento.
+4. **Orçamento:** Custo zero — sem utilização de gateways de pagamento ou serviços de mensageria pagos.
