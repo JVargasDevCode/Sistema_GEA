@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # GEA — Gestão de Eventos Acadêmicos
 
 Sistema web para gerenciamento de eventos acadêmicos, como semanas acadêmicas, palestras, workshops e minicursos.
