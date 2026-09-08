@@ -100,4 +100,14 @@ Desenvolver uma aplicação web integrada para gestão, acompanhamento e certifi
 2. **Arquitetura:** Aplicação 100% web com suporte a layout responsivo para navegadores.
 3. **Tecnologia:** Uso exclusivo de tecnologias dominadas pela equipe de desenvolvimento.
 4. **Orçamento:** Custo zero — sem utilização de gateways de pagamento ou serviços de mensageria pagos.
->>>>>>> e762bdb54596b6f494e673dcb14afdf319b05636
+
+---
+
+## Equipe
+
+* Julio O. de Vargas
+* Bruna Santana
+* Davi Henrique
+* Pedro Woruby
+* Viel
+* Natalia Xavier
