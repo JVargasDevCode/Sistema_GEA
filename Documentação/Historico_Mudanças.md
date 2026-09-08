@@ -1,3 +1,6 @@
 ## Histórico de mudanças
 
-- **Alteração do README:** foram acrescentadas novas informações sobre o projeto e a documentação foi reorganizada, dividindo os conteúdos por arquivos .md e temas para facilitar o entendimento, a consulta e a explicação do sistema.
+| **Versão** | **Data** | **Alteração Realizada** | **Responsável** |
+|---|---|---|---|
+| 1.0 | 14/08/2026 | Primeira versão do documento | Equipe |
+| 1.1 | 08/09/2026 | README reorganizado, dividindo os conteúdos em arquivos para melhor organização e entendimento | Julio |
