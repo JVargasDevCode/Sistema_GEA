@@ -25,10 +25,6 @@ O GEA é um sistema web voltado à organização de eventos acadêmicos — como
 * PostgreSQL
 * SQL
 * Visual Studio Code
-=======
-# GEA — Gestão de Eventos Acadêmicos.
-
-Plataforma web centralizada para planejamento, inscrições, controle de presença e certificação automatizada de eventos acadêmicos.
 
 ---
 
