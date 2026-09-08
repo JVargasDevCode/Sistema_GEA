@@ -7,12 +7,12 @@ O GEA é um sistema web voltado à organização de eventos acadêmicos — como
 
 ## Documentação
 
-* [Contexto](Contexto.md)
-* [Contexto e Problema](Contexto_E_Problema.md)
-* [Objetivos](Objetivos.md)
-* [Público-alvo e Perfis de Usuário](publico-alvo-e-perfis.md)
-* [Escopo](Escopo.md)
-* [Tecnologias Utilizadas](Tecnologias_Utilizadas.md)
+* [Contexto](Documentação/Contexto.md)
+* [Contexto e Problema](Documentação/Contexto_E_Problema.md)
+* [Objetivos](Documentação/Objetivos.md)
+* [Público-alvo e Perfis de Usuário](Documentação/publico-alvo-e-perfis.md)
+* [Escopo](Documentação/Escopo.md)
+* [Tecnologias Utilizadas](Documentação/Tecnologias_Utilizadas.md)
 
 ## Tecnologias
 
