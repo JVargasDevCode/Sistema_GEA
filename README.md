@@ -14,6 +14,8 @@ O GEA é um sistema web voltado à organização de eventos acadêmicos — como
 * [Escopo](Documentação/Escopo.md)
 * [Tecnologias Utilizadas](Documentação/Tecnologia_Utilizadas.md)
 * [Dicionário de dados](Documentação/Dicionario_Dados.md)
+* [Rastreabilidade](Documentação/Rastreabilidade.md)
+* [Histórico de mudanças](Documentação/Historico_Mudanças.md)
 
 ## Tecnologias
 
@@ -99,7 +101,6 @@ Desenvolver uma aplicação web integrada para gestão, acompanhamento e certifi
 4. **Orçamento:** Custo zero — sem utilização de gateways de pagamento ou serviços de mensageria pagos.
 
 ---
-
 ## Equipe
 
 * Julio O. de Vargas
