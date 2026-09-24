@@ -67,9 +67,8 @@ Desenvolver uma aplicação web integrada para gestão, acompanhamento e certifi
 
 | Perfil | Responsabilidades & Ações |
 | :--- | :--- |
-| **Organizador / Administrador** | Gerencia eventos, atividades e palestrantes; monitora inscrições; registra presenças; acessa relatórios analíticos e valida a emissão de certificados. |
-| **Participante** | Explora a programação; realiza inscrições em atividades; acompanha status de vaga; avalia sessões frequentadas e realiza o download de certificados. |
-
+| **Organizador** | Gerencia eventos, atividades e palestrantes; monitora inscrições; registra presenças; acessa relatórios analíticos e valida a emissão de certificados. |
+| **Estudante** | Explora a programação; realiza inscrições em atividades; acompanha status de vaga; avalia sessões frequentadas e realiza o download de certificados. |
 > **Nota:** Palestrantes são cadastrados como entidade vinculada às atividades (mini bio e contatos), sem perfil de acesso exclusivo nesta versão.
 
 ---
