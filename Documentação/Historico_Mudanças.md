@@ -8,3 +8,4 @@
 | 1.3 | 24/09/2026 | Diagramas de banco de dados lógico arrumado com base no diagrama de classe para não contradizer.| Davi        |
 | 1.4 | 24/09/2026 | Diagramas de banco de dados conceitual modificado para versão atual do banco de dados.          | Davi        |
 | 1.5 | 24/09/2026 | Dicionário de dados atualizado de acordo com as modificações do banco de dados lógico.          | Davi        |
+| 1.6 | 24/09/2026 | Adicionados os protótipos de tela conceitual.                                                   | Davi        |
