@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEA — Eventos Acadêmicos</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#" id="logoInicio" aria-label="Página inicial">GEA<span></span></a>
+    <nav>
+      <a href="#eventos" id="navEventos">Eventos</a>
+      <a href="#eventos">Comitês</a>
+      <a href="#eventos">Atléticas</a>
+      <a href="#eventos">Editais</a>
+      <a href="#eventos">Ingressos</a>
+      <a href="#eventos">Contato</a>
+    </nav>
+    <div class="top-actions">
+      <span id="usuarioLogado" class="user-greeting hidden"></span>
+      <button class="btn btn-light" id="btnEntrar">Entrar</button>
+      <button class="btn btn-dark hidden" id="btnSair">Sair</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="telaInicial" class="page">
+      <article class="welcome-card">
+        <span class="eyebrow">GESTÃO DE EVENTOS ACADÊMICOS</span>
+        <h1>Bem-vindo ao GEA</h1>
+        <p class="lead">Descubra eventos, participe de atividades acadêmicas e acompanhe suas inscrições em um só lugar.</p>
+        <div class="welcome-actions">
+          <button class="btn btn-dark" id="btnIrLogin">Entrar</button>
+          <button class="btn btn-light" id="btnIrCadastro">Criar minha conta</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="telaCadastro" class="page hidden">
+      <button class="back-link" id="voltarInicialCadastro">← Voltar para a tela inicial</button>
+      <article class="form-card narrow">
+        <h1>Criar conta</h1>
+        <p class="subtitle">Preencha seus dados para acessar o GEA.</p>
+        <form id="formCadastro" novalidate>
+          <label for="cadNome">Nome completo</label>
+          <input id="cadNome" autocomplete="name" placeholder="Seu nome completo" required>
+          <label for="cadEmail">E-mail</label>
+          <input id="cadEmail" type="email" autocomplete="email" placeholder="voce@email.com" required>
+          <label for="cadSenha">Senha (mínimo de 6 caracteres)</label>
+          <input id="cadSenha" type="password" autocomplete="new-password" minlength="6" required>
+          <label for="cadConfirmarSenha">Confirmar senha</label>
+          <input id="cadConfirmarSenha" type="password" autocomplete="new-password" minlength="6" required>
+          <p id="erroCadastro" class="form-error" role="alert"></p>
+          <button class="btn btn-blue full" type="submit">Cadastrar</button>
+        </form>
+        <p class="switch-auth">Já tem uma conta? <a href="#" id="linkLoginCadastro">Entrar</a></p>
+      </article>
+    </section>
+
+    <section id="telaCadastroSucesso" class="page hidden">
+      <article class="success-card">
+        <div class="success-icon">✓</div>
+        <h1>Cadastro realizado!</h1>
+        <p>Sua conta foi criada. Agora entre com seu e-mail e senha para acessar os eventos.</p>
+        <button id="btnSucessoLogin" class="btn btn-dark">Ir para o login</button>
+      </article>
+    </section>
+
+    <section id="telaEventos" class="page hidden">
+      <div class="page-heading">
+        <h1>Eventos</h1>
+        <p>Confira os eventos disponíveis e participe!</p>
+      </div>
+      <div class="filters">
+        <input id="buscaEvento" type="search" placeholder="⌕  Buscar por nome do evento..." aria-label="Buscar eventos">
+        <select id="filtroCategoria" aria-label="Filtrar por categoria">
+          <option value="">Todos</option>
+          <option value="Acadêmico">Acadêmico</option>
+          <option value="Tecnologia">Tecnologia</option>
+          <option value="Social">Social</option>
+        </select>
+      </div>
+      <div id="listaEventos" class="event-list">
+        <p class="muted">Carregando eventos...</p>
+      </div>
+      <p id="mensagemEventos" class="notice" role="status"></p>
+    </section>
+
+    <section id="telaDetalhe" class="page hidden">
+      <button class="back-link" id="voltarEventos">← Voltar para os eventos</button>
+      <article class="detail-card">
+        <span class="eyebrow" id="detalheCategoria">EVENTO ACADÊMICO</span>
+        <h1 id="detalheNome">Nome do evento</h1>
+        <p id="detalheDescricao" class="lead"></p>
+        <div class="detail-meta">
+          <p><strong>Data:</strong> <span id="detalheData"></span></p>
+          <p><strong>Local:</strong> <span id="detalheLocal"></span></p>
+        </div>
+        <button id="btnInscrever" class="btn btn-blue full">Inscrever-se neste evento</button>
+      </article>
+    </section>
+
+    <section id="telaInscricao" class="page hidden">
+      <button class="back-link" id="voltarDetalhe">← Voltar para o evento</button>
+      <article class="form-card">
+        <h1>Inscrição no Evento</h1>
+        <p class="subtitle" id="nomeEventoInscricao"></p>
+        <form id="formInscricao" novalidate>
+          <input type="hidden" id="eventoId">
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" placeholder="João Silva" autocomplete="name" required>
+
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="joao@email.com" autocomplete="email" required>
+
+          <div class="form-grid">
+            <div>
+              <label for="curso">Curso</label>
+              <select id="curso" name="curso" required>
+                <option value="">Selecione seu curso ▼</option>
+                <option>Análise e Desenvolvimento de Sistemas</option>
+                <option>Ciência da Computação</option>
+                <option>Engenharia de Software</option>
+                <option>Administração</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div>
+              <label for="turno">Turno</label>
+              <select id="turno" name="turno" required>
+                <option value="">Selecione seu turno ▼</option>
+                <option>Matutino</option>
+                <option>Vespertino</option>
+                <option>Noturno</option>
+                <option>EAD</option>
+              </select>
+            </div>
+          </div>
+
+          <label class="terms">
+            <input id="aceitouTermos" type="checkbox">
+            <span>Li e concordo com os termos e condições do evento.</span>
+          </label>
+          <p id="erroInscricao" class="form-error" role="alert"></p>
+          <button type="submit" class="btn btn-blue full">Confirmar inscrição</button>
+        </form>
+      </article>
+    </section>
+
+    <section id="telaSucesso" class="page hidden">
+      <article class="success-card">
+        <div class="success-icon">✓</div>
+        <h1>Inscrição confirmada!</h1>
+        <p id="mensagemSucesso">Sua inscrição foi realizada com sucesso.</p>
+        <button id="voltarLista" class="btn btn-dark">Voltar para os eventos</button>
+      </article>
+    </section>
+
+    <section id="telaLogin" class="page hidden">
+      <button class="back-link" id="voltarInicialLogin">← Voltar para a tela inicial</button>
+      <article class="form-card narrow">
+        <h1>Entrar no GEA</h1>
+        <p class="subtitle">Informe os dados da sua conta.</p>
+        <form id="formLogin" novalidate>
+          <label for="loginEmail">E-mail</label>
+          <input id="loginEmail" type="email" autocomplete="email" placeholder="voce@email.com" required>
+          <label for="loginSenha">Senha</label>
+          <input id="loginSenha" type="password" autocomplete="current-password" required>
+          <p id="erroLogin" class="form-error" role="alert"></p>
+          <button class="btn btn-blue full" type="submit">Entrar</button>
+        </form>
+        <p class="switch-auth">Ainda não tem conta? <a href="#" id="linkCadastroLogin">Cadastre-se</a></p>
+      </article>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
