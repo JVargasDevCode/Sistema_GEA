@@ -9,3 +9,5 @@
 | 1.4 | 24/09/2026 | Diagramas de banco de dados conceitual modificado para versão atual do banco de dados.          | Davi        |
 | 1.5 | 24/09/2026 | Dicionário de dados atualizado de acordo com as modificações do banco de dados lógico.          | Davi        |
 | 1.6 | 24/09/2026 | Adicionados os protótipos de tela conceitual.                                                   | Davi        |
+| 1.8 | 20/10/2026 | Revisão realizada e base mantida.                                                               | Equipe      |
+
