@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEA — Eventos Acadêmicos</title>
+  <link rel="stylesheet" href="/styles.css?v=6">
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="#" id="logoInicio" aria-label="Página inicial">GEA<span></span></a>
+  <nav>
+    <a href="#eventos" id="navEventos">Eventos</a>
+    <a href="#minhas-inscricoes" id="navInscricoes" class="hidden">Minhas inscrições</a>
+    <a href="#comites" id="navComites">Comitês</a>
+    <a href="#atleticas" id="navAtleticas">Atléticas</a>
+    <a href="#editais" id="navEditais">Editais</a>
+    <a href="#ingressos" id="navIngressos">Ingressos</a>
+    <a href="#contato" id="navContato">Contato</a>
+  </nav>
+  <div class="top-actions">
+    <span id="usuarioLogado" class="user-greeting hidden"></span>
+    <button class="btn btn-light" id="btnEntrar">Entrar</button>
+    <div class="account-menu hidden" id="accountMenu">
+      <button class="account-avatar" id="btnAccountMenu" type="button" aria-label="Abrir menu da conta" aria-expanded="false">B</button>
+      <div class="account-dropdown hidden" id="accountDropdown">
+        <button type="button" id="btnInformacoesConta">Informações da conta</button>
+        <button type="button" id="btnSair">Sair</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="telaInicial" class="page">
+    <article class="welcome-card">
+      <span class="eyebrow">GESTÃO DE EVENTOS ACADÊMICOS</span>
+      <h1>Bem-vindo ao GEA</h1>
+      <p class="lead">Descubra eventos, participe de atividades acadêmicas e acompanhe suas inscrições em um só lugar.</p>
+      <div class="welcome-actions">
+        <button class="btn btn-dark" id="btnIrLogin">Entrar</button>
+        <button class="btn btn-light" id="btnIrCadastro">Criar minha conta</button>
+      </div>
+    </article>
+  </section>
+
+  <section id="telaCadastro" class="page hidden">
+    <button class="back-link" id="voltarInicialCadastro">← Voltar para a tela inicial</button>
+    <article class="form-card narrow">
+      <h1>Criar conta</h1>
+      <p class="subtitle">Preencha seus dados para acessar o GEA.</p>
+      <form id="formCadastro" novalidate>
+        <label for="cadNome">Nome completo</label>
+        <input id="cadNome" autocomplete="name" placeholder="Seu nome completo" required>
+        <label for="cadEmail">E-mail</label>
+        <input id="cadEmail" type="email" autocomplete="email" placeholder="voce@email.com" required>
+        <label for="cadSenha">Senha (mínimo de 6 caracteres)</label>
+        <input id="cadSenha" type="password" autocomplete="new-password" minlength="6" required>
+        <label for="cadConfirmarSenha">Confirmar senha</label>
+        <input id="cadConfirmarSenha" type="password" autocomplete="new-password" minlength="6" required>
+        <p id="erroCadastro" class="form-error" role="alert"></p>
+        <button class="btn btn-blue full" type="submit">Cadastrar</button>
+      </form>
+      <p class="switch-auth">Já tem uma conta? <a href="#" id="linkLoginCadastro">Entrar</a></p>
+    </article>
+  </section>
+
+  <section id="telaCadastroSucesso" class="page hidden">
+    <article class="success-card">
+      <div class="success-icon">✓</div>
+      <h1>Cadastro realizado!</h1>
+      <p>Sua conta foi criada. Agora entre com seu e-mail e senha para acessar os eventos.</p>
+      <button id="btnSucessoLogin" class="btn btn-dark">Ir para o login</button>
+    </article>
+  </section>
+
+  <section id="telaEventos" class="page hidden">
+    <div class="page-heading page-heading-row">
+      <div>
+        <h1>Eventos</h1>
+        <p>Confira os eventos disponíveis e participe!</p>
+      </div>
+    </div>
+    <div class="filters">
+      <input id="buscaEvento" type="search" placeholder="⌕  Buscar por nome do evento..." aria-label="Buscar eventos">
+      <select id="filtroCategoria" aria-label="Filtrar por categoria">
+        <option value="">Todos</option>
+        <option value="Acadêmico">Acadêmico</option>
+        <option value="Tecnologia">Tecnologia</option>
+        <option value="Social">Social</option>
+      </select>
+    </div>
+    <div id="listaEventos" class="event-list">
+      <p class="muted">Carregando eventos...</p>
+    </div>
+    <p id="mensagemEventos" class="notice" role="status"></p>
+  </section>
+
+  <section id="telaComites" class="page hidden">
+    <div class="page-heading">
+      <span class="eyebrow">ORGANIZAÇÃO E PARTICIPAÇÃO</span>
+      <h1>Nossos Comitês</h1>
+      <p>Conheça os grupos responsáveis por planejar, organizar e tornar os eventos acadêmicos ainda mais especiais.</p>
+    </div>
+
+    <div class="committee-intro">
+      <h2>Juntos construímos experiências!</h2>
+      <p>Os comitês do GEA são grupos de trabalho fictícios, criados para demonstrar como estudantes podem contribuir com o planejamento e a realização de atividades acadêmicas, culturais e tecnológicas.</p>
+    </div>
+
+    <div class="committee-grid">
+      <article class="committee-card">
+        <div class="committee-icon">🎓</div>
+        <span class="committee-tag">Organização</span>
+        <h2>Comitê de Organização Acadêmica</h2>
+        <p>Responsável pelo planejamento e acompanhamento de eventos acadêmicos, palestras, semanas de cursos e encontros científicos.</p>
+        <h3>Principais atividades</h3>
+        <ul>
+          <li>Planejamento da programação dos eventos.</li>
+          <li>Organização de palestras e oficinas.</li>
+          <li>Contato com palestrantes e convidados.</li>
+        </ul>
+      </article>
+
+      <article class="committee-card">
+        <div class="committee-icon">💡</div>
+        <span class="committee-tag">Inovação</span>
+        <h2>Comitê de Tecnologia e Inovação</h2>
+        <p>Incentiva o desenvolvimento de ideias, projetos tecnológicos e iniciativas relacionadas à inovação e transformação digital.</p>
+        <h3>Principais atividades</h3>
+        <ul>
+          <li>Organização de workshops tecnológicos.</li>
+          <li>Divulgação de projetos acadêmicos.</li>
+          <li>Promoção de desafios e atividades de inovação.</li>
+        </ul>
+      </article>
+
+      <article class="committee-card">
+        <div class="committee-icon">📢</div>
+        <span class="committee-tag">Comunicação</span>
+        <h2>Comitê de Comunicação e Marketing</h2>
+        <p>Cuida da identidade visual, divulgação e comunicação dos eventos, aproximando a comunidade acadêmica das atividades.</p>
+        <h3>Principais atividades</h3>
+        <ul>
+          <li>Criação de materiais de divulgação.</li>
+          <li>Gerenciamento das redes sociais.</li>
+          <li>Produção de fotografias e conteúdos.</li>
+        </ul>
+      </article>
+
+      <article class="committee-card">
+        <div class="committee-icon">🎭</div>
+        <span class="committee-tag">Integração</span>
+        <h2>Comitê de Cultura e Integração</h2>
+        <p>Promove atividades culturais, sociais e de integração, incentivando a participação e a convivência entre estudantes.</p>
+        <h3>Principais atividades</h3>
+        <ul>
+          <li>Organização de eventos culturais.</li>
+          <li>Atividades de integração estudantil.</li>
+          <li>Campanhas e ações sociais.</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="committee-footer">
+      <h2>Faça parte dessa experiência!</h2>
+      <p>A participação estudantil é essencial para construir eventos cada vez melhores e fortalecer nossa comunidade acadêmica.</p>
+      <button class="btn btn-dark" id="btnConhecerEventos">Conhecer eventos</button>
+    </div>
+  </section>
+
+  <section id="telaAtleticas" class="page hidden">
+    <div class="page-heading">
+      <span class="eyebrow">ESPORTE, UNIÃO E INTEGRAÇÃO</span>
+      <h1>Atléticas acadêmicas</h1>
+      <p>Conheça o papel das atléticas na vida universitária e descubra formas de participar.</p>
+    </div>
+
+    <div class="athletics-hero">
+      <div class="athletics-hero-icon">🏆</div>
+      <div>
+        <span class="ticket-label">VIDA UNIVERSITÁRIA</span>
+        <h2>Muito além da competição!</h2>
+        <p>As atléticas aproximam estudantes, incentivam a prática esportiva e promovem experiências de integração dentro e fora da universidade.</p>
+      </div>
+    </div>
+
+    <div class="athletics-grid">
+      <article class="info-card">
+        <div class="info-card-icon">⚽</div>
+        <h2>Esportes e competições</h2>
+        <p>Organização de equipes, treinos e participação em torneios universitários de diferentes modalidades.</p>
+      </article>
+      <article class="info-card">
+        <div class="info-card-icon">🤝</div>
+        <h2>Integração estudantil</h2>
+        <p>Atividades que aproximam alunos de diferentes cursos e períodos, fortalecendo o sentimento de comunidade.</p>
+      </article>
+      <article class="info-card">
+        <div class="info-card-icon">🎉</div>
+        <h2>Eventos e campanhas</h2>
+        <p>Ações culturais, campanhas solidárias e encontros que tornam a experiência acadêmica mais participativa.</p>
+      </article>
+    </div>
+
+    <div class="content-panel">
+      <h2>Como participar?</h2>
+      <ol class="numbered-list">
+        <li>Procure os canais oficiais de comunicação da atlética da sua instituição.</li>
+        <li>Confira os processos de integração, seletivas, treinos e eventos divulgados.</li>
+        <li>Participe respeitando as regras, os colegas e os espaços coletivos.</li>
+      </ol>
+      <p class="content-note">As atléticas apresentadas nesta página são descritas de forma institucional e ilustrativa. O GEA não representa uma atlética real nem realiza inscrições esportivas.</p>
+    </div>
+  </section>
+
+  <section id="telaEditais" class="page hidden">
+    <div class="page-heading">
+      <span class="eyebrow">OPORTUNIDADES ACADÊMICAS</span>
+      <h1>Editais e oportunidades</h1>
+      <p>Entenda onde os editais se encaixam na jornada acadêmica e o que observar antes de participar.</p>
+    </div>
+
+    <div class="notice-banner">
+      <span>📄</span>
+      <div>
+        <h2>Fique atento aos prazos!</h2>
+        <p>Leia o documento completo e confira os requisitos, documentos necessários e datas de cada processo.</p>
+      </div>
+    </div>
+
+    <div class="notice-grid">
+      <article class="notice-card">
+        <span class="notice-card-icon">🔬</span>
+        <span class="notice-category">PESQUISA</span>
+        <h2>Iniciação científica</h2>
+        <p>Oportunidades para estudantes interessados em participar de projetos de pesquisa, desenvolver estudos e aproximar-se da produção científica.</p>
+        <p class="notice-meta"><strong>Confira:</strong> critérios de seleção, orientador, plano de trabalho e período de inscrição.</p>
+      </article>
+      <article class="notice-card">
+        <span class="notice-card-icon">🎓</span>
+        <span class="notice-category">EXTENSÃO</span>
+        <h2>Projetos de extensão</h2>
+        <p>Chamadas para atividades que conectam o conhecimento acadêmico às necessidades da comunidade.</p>
+        <p class="notice-meta"><strong>Confira:</strong> público-alvo, carga horária, atividades e forma de participação.</p>
+      </article>
+      <article class="notice-card">
+        <span class="notice-card-icon">💼</span>
+        <span class="notice-category">OPORTUNIDADES</span>
+        <h2>Bolsas e monitorias</h2>
+        <p>Processos seletivos para bolsas acadêmicas, monitorias e outras oportunidades de desenvolvimento estudantil.</p>
+        <p class="notice-meta"><strong>Confira:</strong> pré-requisitos, documentação, etapas e critérios de classificação.</p>
+      </article>
+      <article class="notice-card">
+        <span class="notice-card-icon">📅</span>
+        <span class="notice-category">EVENTOS</span>
+        <h2>Chamadas para eventos</h2>
+        <p>Divulgação de prazos para submissão de trabalhos, participação em semanas acadêmicas e apresentação de projetos.</p>
+        <p class="notice-meta"><strong>Confira:</strong> regras de submissão, formato dos trabalhos e cronograma.</p>
+      </article>
+    </div>
+
+    <div class="content-panel">
+      <h2>Checklist antes de se inscrever</h2>
+      <ul class="check-list">
+        <li>Verifique se você atende aos requisitos do edital.</li>
+        <li>Anote o prazo final e o horário de encerramento das inscrições.</li>
+        <li>Separe os documentos solicitados no formato indicado.</li>
+        <li>Leia os critérios de seleção e acompanhe as publicações oficiais.</li>
+      </ul>
+      <p class="content-note">Atenção: os exemplos desta página são informativos e fictícios. Não há editais reais, inscrições ou processos seletivos abertos por meio deste protótipo.</p>
+    </div>
+  </section>
+
+  <section id="telaIngressos" class="page hidden">
+    <div class="page-heading">
+      <span class="eyebrow">PARTICIPE DOS EVENTOS</span>
+      <h1>Ingressos</h1>
+      <p>Veja como garantir sua participação nas atividades promovidas pelo GEA.</p>
+    </div>
+
+    <div class="ticket-highlight">
+      <div class="ticket-highlight-icon">🎟️</div>
+      <div>
+        <span class="ticket-label">INGRESSOS DIGITAIS</span>
+        <h2>Sua próxima experiência começa aqui!</h2>
+        <p>No GEA, a participação nos eventos é organizada por meio de inscrições digitais. Consulte os eventos disponíveis, escolha aquele de seu interesse e confirme sua inscrição.</p>
+        <button class="btn btn-dark" id="btnIngressosEventos">Ver eventos disponíveis</button>
+      </div>
+    </div>
+
+    <div class="ticket-steps">
+      <article class="ticket-step">
+        <span>01</span>
+        <h2>Escolha um evento</h2>
+        <p>Acesse a página de eventos e confira as datas, os locais e as descrições das atividades.</p>
+      </article>
+      <article class="ticket-step">
+        <span>02</span>
+        <h2>Faça sua inscrição</h2>
+        <p>Entre na sua conta, selecione o evento e informe seu curso e turno para concluir o cadastro.</p>
+      </article>
+      <article class="ticket-step">
+        <span>03</span>
+        <h2>Acompanhe sua inscrição</h2>
+        <p>Consulte a área “Minhas inscrições” para visualizar os eventos em que sua participação foi confirmada.</p>
+      </article>
+    </div>
+
+    <div class="ticket-note">
+      <h2>Informações importantes</h2>
+      <ul>
+        <li>As inscrições demonstradas neste projeto são gratuitas e não exigem pagamento.</li>
+        <li>A confirmação é digital e fica vinculada à conta utilizada no cadastro.</li>
+        <li>Confira as informações de data e local na página de cada evento.</li>
+        <li>Este ambiente é um protótipo acadêmico: não há emissão de ingresso com QR Code nem controle real de entrada.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="telaContato" class="page hidden">
+    <div class="page-heading">
+      <span class="eyebrow">FALE COM A GENTE</span>
+      <h1>Contato</h1>
+      <p>Tem dúvidas, sugestões ou gostaria de saber mais sobre os eventos? Estamos à disposição!</p>
+    </div>
+
+    <div class="contact-layout">
+      <article class="contact-info-card">
+        <h2>Central de atendimento GEA</h2>
+        <p>Utilize os canais abaixo para conhecer a proposta de atendimento do sistema.</p>
+
+        <div class="contact-item">
+          <span>✉️</span>
+          <div>
+            <strong>E-mail</strong>
+            <p>contato@gea-eventos.example</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <span>☎️</span>
+          <div>
+            <strong>Telefone</strong>
+            <p>(42) 4000-2026</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <span>📍</span>
+          <div>
+            <strong>Endereço</strong>
+            <p> Rua fictícia, 1000 — Centro, Ponta Grossa/PR</p>
+          </div>
+        </div>
+
+        <div class="contact-hours">
+          <strong>Horário de atendimento</strong>
+          <p>Segunda a sexta-feira, das 9h às 18h.</p>
+        </div>
+
+        <p class="contact-disclaimer">Os dados de contato e o endereço são fictícios e foram criados exclusivamente para a demonstração acadêmica do GEA.</p>
+      </article>
+
+      <article class="contact-form-card">
+        <h2>Envie uma mensagem</h2>
+        <p>Preencha os campos abaixo para simular o envio de uma mensagem.</p>
+
+        <form id="formContato" novalidate>
+          <label for="contatoNome">Nome</label>
+          <input id="contatoNome" name="nome" placeholder="Como podemos chamar você?" required>
+
+          <label for="contatoEmail">E-mail</label>
+          <input id="contatoEmail" name="email" type="email" placeholder="voce@email.com" required>
+
+          <label for="contatoAssunto">Assunto</label>
+          <select id="contatoAssunto" name="assunto" required>
+            <option value="">Selecione um assunto</option>
+            <option>Dúvidas sobre eventos</option>
+            <option>Inscrições e ingressos</option>
+            <option>Comitês e participação</option>
+            <option>Sugestões e outros assuntos</option>
+          </select>
+
+          <label for="contatoMensagem">Mensagem</label>
+          <textarea id="contatoMensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+
+          <p id="erroContato" class="form-error" role="alert"></p>
+          <p id="sucessoContato" class="contact-success" role="status"></p>
+
+          <button class="btn btn-blue full" type="submit">Enviar mensagem</button>
+        </form>
+
+        <p class="contact-disclaimer">A demonstração valida os dados no navegador, mas não envia mensagens para um servidor ou e-mail real.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="telaMinhasInscricoes" class="page hidden">
+    <div class="page-heading">
+      <h1>Minhas inscrições</h1>
+      <p>Acompanhe os eventos em que você se inscreveu.</p>
+    </div>
+    <div id="listaMinhasInscricoes" class="event-list registrations-list">
+      <p class="muted">Carregando suas inscrições...</p>
+    </div>
+    <p id="mensagemMinhasInscricoes" class="notice" role="status"></p>
+  </section>
+
+  <section id="telaDetalhe" class="page hidden">
+    <button class="back-link" id="voltarEventos">← Voltar para os eventos</button>
+    <article class="detail-card">
+      <span class="eyebrow" id="detalheCategoria">EVENTO ACADÊMICO</span>
+      <h1 id="detalheNome">Nome do evento</h1>
+      <p id="detalheDescricao" class="lead"></p>
+      <div class="detail-meta">
+        <p><strong>Data:</strong> <span id="detalheData"></span></p>
+        <p><strong>Local:</strong> <span id="detalheLocal"></span></p>
+      </div>
+      <button id="btnInscrever" class="btn btn-blue full">Inscrever-se neste evento</button>
+    </article>
+  </section>
+
+  <section id="telaInscricao" class="page hidden">
+    <button class="back-link" id="voltarDetalhe">← Voltar para o evento</button>
+    <article class="form-card">
+      <h1>Inscrição no Evento</h1>
+      <p class="subtitle" id="nomeEventoInscricao"></p>
+      <form id="formInscricao" novalidate>
+        <input type="hidden" id="eventoId">
+
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" placeholder="Nome da sua conta" autocomplete="name" readonly required>
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" placeholder="E-mail da sua conta" autocomplete="email" readonly required>
+
+        <div class="form-grid">
+          <div>
+            <label for="curso">Curso</label>
+            <select id="curso" name="curso" required>
+              <option value="">Selecione seu curso ▼</option>
+              <option>Análise e Desenvolvimento de Sistemas</option>
+              <option>Ciência da Computação</option>
+              <option>Engenharia de Software</option>
+              <option>Administração</option>
+              <option>Outro</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="turno">Turno</label>
+            <select id="turno" name="turno" required>
+              <option value="">Selecione seu turno ▼</option>
+              <option>Matutino</option>
+              <option>Vespertino</option>
+              <option>Noturno</option>
+              <option>EAD</option>
+            </select>
+          </div>
+        </div>
+
+        <label class="terms">
+          <input id="aceitouTermos" type="checkbox">
+          <span>Li e concordo com os termos e condições do evento.</span>
+        </label>
+
+        <p class="form-hint">Nome e e-mail são vinculados à sua conta e não podem ser alterados nesta inscrição.</p>
+        <p id="erroInscricao" class="form-error" role="alert"></p>
+        <button type="submit" class="btn btn-blue full">Confirmar inscrição</button>
+      </form>
+    </article>
+  </section>
+
+  <section id="telaSucesso" class="page hidden">
+    <article class="success-card">
+      <div class="success-icon">✓</div>
+      <h1>Inscrição confirmada!</h1>
+      <p id="mensagemSucesso">Sua inscrição foi realizada com sucesso.</p>
+      <div class="success-actions">
+        <button id="voltarLista" class="btn btn-dark">Voltar para os eventos</button>
+      </div>
+    </article>
+  </section>
+
+  <section id="telaLogin" class="page hidden">
+    <button class="back-link" id="voltarInicialLogin">← Voltar para a tela inicial</button>
+    <article class="form-card narrow">
+      <h1>Entrar no GEA</h1>
+      <p class="subtitle">Informe os dados da sua conta.</p>
+      <form id="formLogin" novalidate>
+        <label for="loginEmail">E-mail</label>
+        <input id="loginEmail" type="email" autocomplete="email" placeholder="voce@email.com" required>
+
+        <label for="loginSenha">Senha</label>
+        <input id="loginSenha" type="password" autocomplete="current-password" required>
+
+        <p id="erroLogin" class="form-error" role="alert"></p>
+        <button class="btn btn-blue full" type="submit">Entrar</button>
+      </form>
+      <p class="switch-auth">Ainda não tem conta? <a href="#" id="linkCadastroLogin">Cadastre-se</a></p>
+    </article>
+  </section>
+</main>
+
+<div id="modalConta" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="tituloConta">
+  <article class="account-modal">
+    <button type="button" class="modal-close" id="fecharModalConta" aria-label="Fechar">×</button>
+    <h2 id="tituloConta">Informações da conta</h2>
+    <p class="account-field-label">Nome</p>
+    <p id="contaNome" class="account-field-value"></p>
+    <p class="account-field-label">E-mail</p>
+    <p id="contaEmail" class="account-field-value"></p>
+    <button type="button" class="btn btn-dark full" id="btnFecharConta">Fechar</button>
+  </article>
+</div>
+
+<script src="/app.js?v=7"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="Ilustração acadêmica">
+ <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dce9ff"/><stop offset="1" stop-color="#a9c6f5"/></linearGradient></defs>
+ <rect width="400" height="260" rx="24" fill="url(#g)"/><circle cx="322" cy="54" r="34" fill="#fff" opacity=".42"/><path d="M74 173h252v15H74z" fill="#315b9c" opacity=".18"/>
+ <path d="M200 60 92 105l108 45 108-45z" fill="#315b9c"/><path d="M126 119v48c39 29 109 29 148 0v-48l-74 31z" fill="#4779bd"/><path d="M308 106v58" stroke="#315b9c" stroke-width="7" stroke-linecap="round"/><circle cx="308" cy="174" r="10" fill="#315b9c"/><path d="M179 60h42" stroke="#fff" stroke-width="5" opacity=".7"/>
+ <g fill="#fff" opacity=".8"><circle cx="83" cy="54" r="5"/><circle cx="112" cy="39" r="3"/><circle cx="344" cy="205" r="5"/></g>
+</svg>

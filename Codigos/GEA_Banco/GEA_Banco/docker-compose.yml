@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: gea-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: gea_db
+      POSTGRES_USER: gea_user
+      POSTGRES_PASSWORD: gea123
+    ports:
+      - "5432:5432"
+    volumes:
+      - gea_data:/var/lib/postgresql/data
+volumes:
+  gea_data:
